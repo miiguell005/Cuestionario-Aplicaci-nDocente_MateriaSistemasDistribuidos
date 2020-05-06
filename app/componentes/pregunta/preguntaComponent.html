@@ -1,0 +1,38 @@
+<div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-12">
+        <!--=================Texto Pregunta===========================-->
+        <div class="row">
+          <div class="col-xs-6">
+            <span $ctrl.juegoFinalizado>Puntuación: {{$ctrl.pregunta.puntuacion}}</span>
+          </div>
+          <div class="col-xs-6 text-right">
+            {{$ctrl.pregunta.Materia}}
+          </div>
+        </div>
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <p ng-bind-html="$ctrl.pregunta.Texto"></p>
+            </div>
+          </div>
+        </div>
+        <!--=================Fin Texto Pregunta=======================-->
+        <div ng-repeat="r in $ctrl.pregunta.OpcionRespuesta">
+
+          <div ng-class="r.class">
+            <label class="radio-inline">
+              <input type="radio" ng-click="$ctrl.actualizarRespuestas(r)"
+                     ng-model="r.Seleccionado" ng-if="!$ctrl.juegoFinalizado" value="true">
+              <span ng-if="$ctrl.juegoFinalizado && r.Correcta">✔ </span>
+              <span ng-if="$ctrl.juegoFinalizado && !r.Correcta && r.Seleccionada">X </span>
+              {{r.Texto}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

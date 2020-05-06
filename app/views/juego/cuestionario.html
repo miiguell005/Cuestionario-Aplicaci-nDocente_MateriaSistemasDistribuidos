@@ -1,0 +1,78 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-xs-6">
+          <a class="btn btn-primary btn" href="#!/">Atrás</a>
+        </div>
+        <div class="col-xs-6 text-right">
+          <button class="btn btn-primary" ng-click="cue.finalizarPrueba()" ng-if="!cue.juegoFinalizado && cue.mostrarCuestionario">
+            Finalizar prueba
+          </button>
+        </div>
+      </div>
+
+
+      <!--================ Ingreso del nombre =================-->
+      <div class="row" ng-show="!cue.mostrarCuestionario">
+        <div style="height: 60px;"></div>
+        <label class="col-xs-3">Nombre </label>
+        <div class="col-xs-9">
+          <input class="form-control" ng-model="cue.nombreUsuario" />
+        </div>
+        <br />
+        <div class="col-xs-12 text-center">
+          <br /><br />
+          <button class="btn btn-primary" ng-click="cue.comenzarCuestionario()">Comenzar prueba</button>
+        </div>
+      </div>
+      <!--============== Fin Ingreso del nombre ===============-->
+      <!--============ Comienzo del Cuestionario ==============-->
+      <div ng-show="cue.mostrarCuestionario">
+        <div class="row">
+          <br />
+          <div class="col-xs-6">
+            {{cue.nombreUsuario}}
+          </div>
+          <div class="col-xs-6 text-right">
+            <div ng-show="!cue.juegoFinalizado">
+              <span style="border: 2px solid" ng-class="{'text-warning':  juego.cronometro.alerta == ''}" ng-show="false"> 111 {{juego.cronometro.tiempoRestante}}</span>
+            </div>
+            <div ng-show="cue.juegoFinalizado">
+              Calificación: {{cue.puntuacion}}
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <div ng-show="!cue.juegoFinalizado">
+          <pregunta-component pregunta="cue.cuestionario[cue.preguntaActual]"
+                              event="cue.contestarPregunta(siguientePregunta)"
+                              cargando="cue.cargando"
+                              juego-finalizado="false"
+                              index="cue.preguntaActual"></pregunta-component>
+        </div>
+        <div ng-show="cue.juegoFinalizado">
+          <div ng-repeat="c in cue.cuestionario">
+            <pregunta-component pregunta="c"
+                                event="cue.contestarPregunta(siguientePregunta)"
+                                cargando="cue.cargando"
+                                juego-finalizado="true"
+                                index="cue.preguntaActual"></pregunta-component>
+            <br />
+          </div>
+        </div>
+        <div class="">
+          <div class="form-group text-center" ng-if="!cue.juegoFinalizado">
+            <button class="btn btn-sm btn-default" ng-repeat="i in cue.cuestionario"
+                    ng-class="{'btn-default':  !i.constestado, 'btn-primary':  i.constestado}"
+                    ng-click="cue.actualizarPregunta(i.index)">
+              {{i.index}} 
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

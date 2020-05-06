@@ -1,0 +1,626 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67458386-A659-44BF-BCAA-3131DC33E488}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JuegosHtml</RootNamespace>
+    <AssemblyName>JuegosHtml</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".editorconfig" />
+    <Content Include="app\404.html" />
+    <Content Include="app\bin\font-awesome\css\font-awesome.css" />
+    <Content Include="app\bin\font-awesome\css\font-awesome.min.css" />
+    <Content Include="app\bin\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="app\bin\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="app\bin\jQuery\AUTHORS.txt" />
+    <Content Include="app\bin\jQuery\build\release.js" />
+    <Content Include="app\bin\jQuery\build\release\cdn.js" />
+    <Content Include="app\bin\jQuery\build\release\dist.js" />
+    <Content Include="app\bin\jQuery\build\release\ensure-sizzle.js" />
+    <Content Include="app\bin\jQuery\build\tasks\build.js" />
+    <Content Include="app\bin\jQuery\build\tasks\dist.js" />
+    <Content Include="app\bin\jQuery\build\tasks\lib\spawn_test.js" />
+    <Content Include="app\bin\jQuery\build\tasks\node_smoke_tests.js" />
+    <Content Include="app\bin\jQuery\build\tasks\promises_aplus_tests.js" />
+    <Content Include="app\bin\jQuery\build\tasks\qunit_fixture.js" />
+    <Content Include="app\bin\jQuery\build\tasks\sourcemap.js" />
+    <Content Include="app\bin\jQuery\build\tasks\testswarm.js" />
+    <Content Include="app\bin\jQuery\dist\jquery.js" />
+    <Content Include="app\bin\jQuery\dist\jquery.min.js" />
+    <Content Include="app\bin\jQuery\dist\jquery.slim.js" />
+    <Content Include="app\bin\jQuery\dist\jquery.slim.min.js" />
+    <Content Include="app\bin\jQuery\external\npo\npo.js" />
+    <Content Include="app\bin\jQuery\external\qunit\LICENSE.txt" />
+    <Content Include="app\bin\jQuery\external\qunit\qunit.css" />
+    <Content Include="app\bin\jQuery\external\qunit\qunit.js" />
+    <Content Include="app\bin\jQuery\external\requirejs\require.js" />
+    <Content Include="app\bin\jQuery\external\sinon\LICENSE.txt" />
+    <Content Include="app\bin\jQuery\external\sinon\sinon.js" />
+    <Content Include="app\bin\jQuery\external\sizzle\dist\sizzle.js" />
+    <Content Include="app\bin\jQuery\external\sizzle\dist\sizzle.min.js" />
+    <Content Include="app\bin\jQuery\external\sizzle\LICENSE.txt" />
+    <Content Include="app\bin\jQuery\Gruntfile.js" />
+    <Content Include="app\bin\jQuery\LICENSE.txt" />
+    <Content Include="app\bin\jQuery\src\ajax.js" />
+    <Content Include="app\bin\jQuery\src\ajax\jsonp.js" />
+    <Content Include="app\bin\jQuery\src\ajax\load.js" />
+    <Content Include="app\bin\jQuery\src\ajax\parseXML.js" />
+    <Content Include="app\bin\jQuery\src\ajax\script.js" />
+    <Content Include="app\bin\jQuery\src\ajax\var\location.js" />
+    <Content Include="app\bin\jQuery\src\ajax\var\nonce.js" />
+    <Content Include="app\bin\jQuery\src\ajax\var\rquery.js" />
+    <Content Include="app\bin\jQuery\src\ajax\xhr.js" />
+    <Content Include="app\bin\jQuery\src\attributes.js" />
+    <Content Include="app\bin\jQuery\src\attributes\attr.js" />
+    <Content Include="app\bin\jQuery\src\attributes\classes.js" />
+    <Content Include="app\bin\jQuery\src\attributes\prop.js" />
+    <Content Include="app\bin\jQuery\src\attributes\support.js" />
+    <Content Include="app\bin\jQuery\src\attributes\val.js" />
+    <Content Include="app\bin\jQuery\src\callbacks.js" />
+    <Content Include="app\bin\jQuery\src\core.js" />
+    <Content Include="app\bin\jQuery\src\core\access.js" />
+    <Content Include="app\bin\jQuery\src\core\camelCase.js" />
+    <Content Include="app\bin\jQuery\src\core\DOMEval.js" />
+    <Content Include="app\bin\jQuery\src\core\init.js" />
+    <Content Include="app\bin\jQuery\src\core\isAttached.js" />
+    <Content Include="app\bin\jQuery\src\core\nodeName.js" />
+    <Content Include="app\bin\jQuery\src\core\parseHTML.js" />
+    <Content Include="app\bin\jQuery\src\core\ready-no-deferred.js" />
+    <Content Include="app\bin\jQuery\src\core\ready.js" />
+    <Content Include="app\bin\jQuery\src\core\readyException.js" />
+    <Content Include="app\bin\jQuery\src\core\stripAndCollapse.js" />
+    <Content Include="app\bin\jQuery\src\core\support.js" />
+    <Content Include="app\bin\jQuery\src\core\toType.js" />
+    <Content Include="app\bin\jQuery\src\core\var\rsingleTag.js" />
+    <Content Include="app\bin\jQuery\src\css.js" />
+    <Content Include="app\bin\jQuery\src\css\addGetHookIf.js" />
+    <Content Include="app\bin\jQuery\src\css\adjustCSS.js" />
+    <Content Include="app\bin\jQuery\src\css\curCSS.js" />
+    <Content Include="app\bin\jQuery\src\css\finalPropName.js" />
+    <Content Include="app\bin\jQuery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="app\bin\jQuery\src\css\showHide.js" />
+    <Content Include="app\bin\jQuery\src\css\support.js" />
+    <Content Include="app\bin\jQuery\src\css\var\cssExpand.js" />
+    <Content Include="app\bin\jQuery\src\css\var\getStyles.js" />
+    <Content Include="app\bin\jQuery\src\css\var\isHiddenWithinTree.js" />
+    <Content Include="app\bin\jQuery\src\css\var\rboxStyle.js" />
+    <Content Include="app\bin\jQuery\src\css\var\rnumnonpx.js" />
+    <Content Include="app\bin\jQuery\src\css\var\swap.js" />
+    <Content Include="app\bin\jQuery\src\data.js" />
+    <Content Include="app\bin\jQuery\src\data\Data.js" />
+    <Content Include="app\bin\jQuery\src\data\var\acceptData.js" />
+    <Content Include="app\bin\jQuery\src\data\var\dataPriv.js" />
+    <Content Include="app\bin\jQuery\src\data\var\dataUser.js" />
+    <Content Include="app\bin\jQuery\src\deferred.js" />
+    <Content Include="app\bin\jQuery\src\deferred\exceptionHook.js" />
+    <Content Include="app\bin\jQuery\src\deprecated.js" />
+    <Content Include="app\bin\jQuery\src\dimensions.js" />
+    <Content Include="app\bin\jQuery\src\effects.js" />
+    <Content Include="app\bin\jQuery\src\effects\animatedSelector.js" />
+    <Content Include="app\bin\jQuery\src\effects\Tween.js" />
+    <Content Include="app\bin\jQuery\src\event.js" />
+    <Content Include="app\bin\jQuery\src\event\ajax.js" />
+    <Content Include="app\bin\jQuery\src\event\alias.js" />
+    <Content Include="app\bin\jQuery\src\event\focusin.js" />
+    <Content Include="app\bin\jQuery\src\event\support.js" />
+    <Content Include="app\bin\jQuery\src\event\trigger.js" />
+    <Content Include="app\bin\jQuery\src\exports\amd.js" />
+    <Content Include="app\bin\jQuery\src\exports\global.js" />
+    <Content Include="app\bin\jQuery\src\jquery.js" />
+    <Content Include="app\bin\jQuery\src\manipulation.js" />
+    <Content Include="app\bin\jQuery\src\manipulation\buildFragment.js" />
+    <Content Include="app\bin\jQuery\src\manipulation\getAll.js" />
+    <Content Include="app\bin\jQuery\src\manipulation\setGlobalEval.js" />
+    <Content Include="app\bin\jQuery\src\manipulation\support.js" />
+    <Content Include="app\bin\jQuery\src\manipulation\var\rscriptType.js" />
+    <Content Include="app\bin\jQuery\src\manipulation\var\rtagName.js" />
+    <Content Include="app\bin\jQuery\src\manipulation\wrapMap.js" />
+    <Content Include="app\bin\jQuery\src\manipulation\_evalUrl.js" />
+    <Content Include="app\bin\jQuery\src\offset.js" />
+    <Content Include="app\bin\jQuery\src\queue.js" />
+    <Content Include="app\bin\jQuery\src\queue\delay.js" />
+    <Content Include="app\bin\jQuery\src\selector-native.js" />
+    <Content Include="app\bin\jQuery\src\selector-sizzle.js" />
+    <Content Include="app\bin\jQuery\src\selector.js" />
+    <Content Include="app\bin\jQuery\src\serialize.js" />
+    <Content Include="app\bin\jQuery\src\traversing.js" />
+    <Content Include="app\bin\jQuery\src\traversing\findFilter.js" />
+    <Content Include="app\bin\jQuery\src\traversing\var\dir.js" />
+    <Content Include="app\bin\jQuery\src\traversing\var\rneedsContext.js" />
+    <Content Include="app\bin\jQuery\src\traversing\var\siblings.js" />
+    <Content Include="app\bin\jQuery\src\var\arr.js" />
+    <Content Include="app\bin\jQuery\src\var\class2type.js" />
+    <Content Include="app\bin\jQuery\src\var\concat.js" />
+    <Content Include="app\bin\jQuery\src\var\document.js" />
+    <Content Include="app\bin\jQuery\src\var\documentElement.js" />
+    <Content Include="app\bin\jQuery\src\var\fnToString.js" />
+    <Content Include="app\bin\jQuery\src\var\getProto.js" />
+    <Content Include="app\bin\jQuery\src\var\hasOwn.js" />
+    <Content Include="app\bin\jQuery\src\var\indexOf.js" />
+    <Content Include="app\bin\jQuery\src\var\isFunction.js" />
+    <Content Include="app\bin\jQuery\src\var\isWindow.js" />
+    <Content Include="app\bin\jQuery\src\var\ObjectFunctionString.js" />
+    <Content Include="app\bin\jQuery\src\var\pnum.js" />
+    <Content Include="app\bin\jQuery\src\var\push.js" />
+    <Content Include="app\bin\jQuery\src\var\rcheckableType.js" />
+    <Content Include="app\bin\jQuery\src\var\rcssNum.js" />
+    <Content Include="app\bin\jQuery\src\var\rnothtmlwhite.js" />
+    <Content Include="app\bin\jQuery\src\var\slice.js" />
+    <Content Include="app\bin\jQuery\src\var\support.js" />
+    <Content Include="app\bin\jQuery\src\var\toString.js" />
+    <Content Include="app\bin\jQuery\src\wrap.js" />
+    <Content Include="app\bin\jQuery\src\wrapper.js" />
+    <Content Include="app\bin\jQuery\test\data\1x1.jpg" />
+    <Content Include="app\bin\jQuery\test\data\1x1.svg" />
+    <Content Include="app\bin\jQuery\test\data\ajax\onunload.html" />
+    <Content Include="app\bin\jQuery\test\data\ajax\unreleasedXHR.html" />
+    <Content Include="app\bin\jQuery\test\data\badcall.js" />
+    <Content Include="app\bin\jQuery\test\data\badjson.js" />
+    <Content Include="app\bin\jQuery\test\data\cleanScript.html" />
+    <Content Include="app\bin\jQuery\test\data\core\aliased.html" />
+    <Content Include="app\bin\jQuery\test\data\core\cc_on.html" />
+    <Content Include="app\bin\jQuery\test\data\core\dynamic_ready.html" />
+    <Content Include="app\bin\jQuery\test\data\core\jquery-iterability-transpiled-es6.js" />
+    <Content Include="app\bin\jQuery\test\data\core\jquery-iterability-transpiled.html" />
+    <Content Include="app\bin\jQuery\test\data\core\onready.html" />
+    <Content Include="app\bin\jQuery\test\data\csp-nonce-external.html" />
+    <Content Include="app\bin\jQuery\test\data\csp-nonce-external.js" />
+    <Content Include="app\bin\jQuery\test\data\csp-nonce-globaleval.html" />
+    <Content Include="app\bin\jQuery\test\data\csp-nonce-globaleval.js" />
+    <Content Include="app\bin\jQuery\test\data\csp-nonce.html" />
+    <Content Include="app\bin\jQuery\test\data\csp-nonce.js" />
+    <Content Include="app\bin\jQuery\test\data\csp.include.html" />
+    <Content Include="app\bin\jQuery\test\data\css\cssWidthBeforeDocReady.html" />
+    <Content Include="app\bin\jQuery\test\data\css\cssWidthBrowserZoom.html" />
+    <Content Include="app\bin\jQuery\test\data\dashboard.xml" />
+    <Content Include="app\bin\jQuery\test\data\data\dataAttrs.html" />
+    <Content Include="app\bin\jQuery\test\data\dimensions\documentLarge.html" />
+    <Content Include="app\bin\jQuery\test\data\event\focusElem.html" />
+    <Content Include="app\bin\jQuery\test\data\event\focusinCrossFrame.html" />
+    <Content Include="app\bin\jQuery\test\data\event\interactiveReady.html" />
+    <Content Include="app\bin\jQuery\test\data\event\onbeforeunload.html" />
+    <Content Include="app\bin\jQuery\test\data\event\promiseReady.html" />
+    <Content Include="app\bin\jQuery\test\data\event\syncReady.html" />
+    <Content Include="app\bin\jQuery\test\data\event\triggerunload.html" />
+    <Content Include="app\bin\jQuery\test\data\frame.html" />
+    <Content Include="app\bin\jQuery\test\data\iframe.html" />
+    <Content Include="app\bin\jQuery\test\data\iframeTest.js" />
+    <Content Include="app\bin\jQuery\test\data\inner_module.js" />
+    <Content Include="app\bin\jQuery\test\data\inner_nomodule.js" />
+    <Content Include="app\bin\jQuery\test\data\jquery-1.9.1.js" />
+    <Content Include="app\bin\jQuery\test\data\json_obj.js" />
+    <Content Include="app\bin\jQuery\test\data\manipulation\iframe-denied.html" />
+    <Content Include="app\bin\jQuery\test\data\manipulation\scripts-context.html" />
+    <Content Include="app\bin\jQuery\test\data\mock.php" />
+    <Content Include="app\bin\jQuery\test\data\module.js" />
+    <Content Include="app\bin\jQuery\test\data\name.html" />
+    <Content Include="app\bin\jQuery\test\data\nomodule.js" />
+    <Content Include="app\bin\jQuery\test\data\offset\absolute.html" />
+    <Content Include="app\bin\jQuery\test\data\offset\body.html" />
+    <Content Include="app\bin\jQuery\test\data\offset\boxes.html" />
+    <Content Include="app\bin\jQuery\test\data\offset\fixed.html" />
+    <Content Include="app\bin\jQuery\test\data\offset\relative.html" />
+    <Content Include="app\bin\jQuery\test\data\offset\scroll.html" />
+    <Content Include="app\bin\jQuery\test\data\offset\static.html" />
+    <Content Include="app\bin\jQuery\test\data\offset\table.html" />
+    <Content Include="app\bin\jQuery\test\data\qunit-fixture.html" />
+    <Content Include="app\bin\jQuery\test\data\qunit-fixture.js" />
+    <Content Include="app\bin\jQuery\test\data\readywait.html" />
+    <Content Include="app\bin\jQuery\test\data\selector\html5_selector.html" />
+    <Content Include="app\bin\jQuery\test\data\selector\sizzle_cache.html" />
+    <Content Include="app\bin\jQuery\test\data\support\bodyBackground.html" />
+    <Content Include="app\bin\jQuery\test\data\support\csp.js" />
+    <Content Include="app\bin\jQuery\test\data\support\getComputedSupport.js" />
+    <Content Include="app\bin\jQuery\test\data\test.include.html" />
+    <Content Include="app\bin\jQuery\test\data\test2.html" />
+    <Content Include="app\bin\jQuery\test\data\test3.html" />
+    <Content Include="app\bin\jQuery\test\data\testinit-jsdom.js" />
+    <Content Include="app\bin\jQuery\test\data\testinit.js" />
+    <Content Include="app\bin\jQuery\test\data\testrunner.js" />
+    <Content Include="app\bin\jQuery\test\data\testsuite.css" />
+    <Content Include="app\bin\jQuery\test\data\text.txt" />
+    <Content Include="app\bin\jQuery\test\data\with_fries.xml" />
+    <Content Include="app\bin\jQuery\test\delegatetest.html" />
+    <Content Include="app\bin\jQuery\test\hovertest.html" />
+    <Content Include="app\bin\jQuery\test\index.html" />
+    <Content Include="app\bin\jQuery\test\integration\data\gh-1764-fullscreen-iframe.css" />
+    <Content Include="app\bin\jQuery\test\integration\data\gh-1764-fullscreen-iframe.html" />
+    <Content Include="app\bin\jQuery\test\integration\data\gh-1764-fullscreen.js" />
+    <Content Include="app\bin\jQuery\test\integration\gh-1764-fullscreen.html" />
+    <Content Include="app\bin\jQuery\test\integration\gh-2343-ie-radio-click.html" />
+    <Content Include="app\bin\jQuery\test\jquery.js" />
+    <Content Include="app\bin\jQuery\test\karma.context.html" />
+    <Content Include="app\bin\jQuery\test\karma.debug.html" />
+    <Content Include="app\bin\jQuery\test\localfile.html" />
+    <Content Include="app\bin\jQuery\test\middleware-mockserver.js" />
+    <Content Include="app\bin\jQuery\test\networkerror.html" />
+    <Content Include="app\bin\jQuery\test\node_smoke_tests\document_missing.js" />
+    <Content Include="app\bin\jQuery\test\node_smoke_tests\document_passed.js" />
+    <Content Include="app\bin\jQuery\test\node_smoke_tests\document_present_originally.js" />
+    <Content Include="app\bin\jQuery\test\node_smoke_tests\iterable_with_native_symbol.js" />
+    <Content Include="app\bin\jQuery\test\node_smoke_tests\lib\ensure_global_not_created.js" />
+    <Content Include="app\bin\jQuery\test\node_smoke_tests\lib\ensure_iterability_es6.js" />
+    <Content Include="app\bin\jQuery\test\node_smoke_tests\lib\ensure_jquery.js" />
+    <Content Include="app\bin\jQuery\test\promises_aplus_adapters\deferred.js" />
+    <Content Include="app\bin\jQuery\test\promises_aplus_adapters\when.js" />
+    <Content Include="app\bin\jQuery\test\unit\ajax.js" />
+    <Content Include="app\bin\jQuery\test\unit\animation.js" />
+    <Content Include="app\bin\jQuery\test\unit\attributes.js" />
+    <Content Include="app\bin\jQuery\test\unit\basic.js" />
+    <Content Include="app\bin\jQuery\test\unit\callbacks.js" />
+    <Content Include="app\bin\jQuery\test\unit\core.js" />
+    <Content Include="app\bin\jQuery\test\unit\css.js" />
+    <Content Include="app\bin\jQuery\test\unit\data.js" />
+    <Content Include="app\bin\jQuery\test\unit\deferred.js" />
+    <Content Include="app\bin\jQuery\test\unit\deprecated.js" />
+    <Content Include="app\bin\jQuery\test\unit\dimensions.js" />
+    <Content Include="app\bin\jQuery\test\unit\effects.js" />
+    <Content Include="app\bin\jQuery\test\unit\event.js" />
+    <Content Include="app\bin\jQuery\test\unit\exports.js" />
+    <Content Include="app\bin\jQuery\test\unit\manipulation.js" />
+    <Content Include="app\bin\jQuery\test\unit\offset.js" />
+    <Content Include="app\bin\jQuery\test\unit\queue.js" />
+    <Content Include="app\bin\jQuery\test\unit\ready.js" />
+    <Content Include="app\bin\jQuery\test\unit\selector.js" />
+    <Content Include="app\bin\jQuery\test\unit\serialize.js" />
+    <Content Include="app\bin\jQuery\test\unit\support.js" />
+    <Content Include="app\bin\jQuery\test\unit\traversing.js" />
+    <Content Include="app\bin\jQuery\test\unit\tween.js" />
+    <Content Include="app\bin\jQuery\test\unit\wrap.js" />
+    <Content Include="app\bin\jQuery\test\xhtml.php" />
+    <Content Include="app\componentes\cargando\cargandoComponent.html" />
+    <Content Include="app\componentes\cargando\cargandoComponent.js" />
+    <Content Include="app\componentes\pregunta\preguntaComponent.html" />
+    <Content Include="app\componentes\pregunta\preguntaComponent.js" />
+    <Content Include="app\favicon.ico" />
+    <Content Include="app\images\buscarPareja\cartas\animal.png" />
+    <Content Include="app\images\buscarPareja\cartas\ardilla.png" />
+    <Content Include="app\images\buscarPareja\cartas\buho.png" />
+    <Content Include="app\images\buscarPareja\cartas\buhoEncimaPosillo.png" />
+    <Content Include="app\images\buscarPareja\cartas\buhoEncimaPosilloRosado.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara1.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara10.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara11.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara12.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara2.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara3.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara4.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara5.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara6.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara7.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara8.png" />
+    <Content Include="app\images\buscarPareja\cartas\camara9.png" />
+    <Content Include="app\images\buscarPareja\cartas\cerdo.png" />
+    <Content Include="app\images\buscarPareja\cartas\conejo.png" />
+    <Content Include="app\images\buscarPareja\cartas\conejo2.png" />
+    <Content Include="app\images\buscarPareja\cartas\conejoConZanahoria.png" />
+    <Content Include="app\images\buscarPareja\cartas\elefante.png" />
+    <Content Include="app\images\buscarPareja\cartas\gallinaConPollito.png" />
+    <Content Include="app\images\buscarPareja\cartas\gallinaDurmiendo.png" />
+    <Content Include="app\images\buscarPareja\cartas\jirafa.png" />
+    <Content Include="app\images\buscarPareja\cartas\leon.png" />
+    <Content Include="app\images\buscarPareja\cartas\loboCentado.png" />
+    <Content Include="app\images\buscarPareja\cartas\loboDosPiernas.png" />
+    <Content Include="app\images\buscarPareja\cartas\mapache.png" />
+    <Content Include="app\images\buscarPareja\cartas\mapache2.png" />
+    <Content Include="app\images\buscarPareja\cartas\mariposa1.png" />
+    <Content Include="app\images\buscarPareja\cartas\mariposa2.png" />
+    <Content Include="app\images\buscarPareja\cartas\mariposa3.png" />
+    <Content Include="app\images\buscarPareja\cartas\mariposa4.png" />
+    <Content Include="app\images\buscarPareja\cartas\mariposa5.png" />
+    <Content Include="app\images\buscarPareja\cartas\mariposa6.png" />
+    <Content Include="app\images\buscarPareja\cartas\mariposa7.png" />
+    <Content Include="app\images\buscarPareja\cartas\mariposa8.png" />
+    <Content Include="app\images\buscarPareja\cartas\niñaDeCabeza.png" />
+    <Content Include="app\images\buscarPareja\cartas\niñaSaltando.png" />
+    <Content Include="app\images\buscarPareja\cartas\niñaSaludando.png" />
+    <Content Include="app\images\buscarPareja\cartas\niño.png" />
+    <Content Include="app\images\buscarPareja\cartas\niñoNegro.png" />
+    <Content Include="app\images\buscarPareja\cartas\oso.png" />
+    <Content Include="app\images\buscarPareja\cartas\oso2.png" />
+    <Content Include="app\images\buscarPareja\cartas\osoConGorro.png" />
+    <Content Include="app\images\buscarPareja\cartas\osoPanda.png" />
+    <Content Include="app\images\buscarPareja\cartas\Pajaro1.png" />
+    <Content Include="app\images\buscarPareja\cartas\Pajaro2.png" />
+    <Content Include="app\images\buscarPareja\cartas\Pajaro3.png" />
+    <Content Include="app\images\buscarPareja\cartas\Pajaro4.png" />
+    <Content Include="app\images\buscarPareja\cartas\Pajaro5.png" />
+    <Content Include="app\images\buscarPareja\cartas\Pajaro6.png" />
+    <Content Include="app\images\buscarPareja\cartas\Pajaro7.png" />
+    <Content Include="app\images\buscarPareja\cartas\Pajaro8.png" />
+    <Content Include="app\images\buscarPareja\cartas\Pajaro9.png" />
+    <Content Include="app\images\buscarPareja\fondo\blanco.png" />
+    <Content Include="app\images\buscarPareja\fondo\pasto.png" />
+    <Content Include="app\images\buscarPareja\cartas\pato.png" />
+    <Content Include="app\images\buscarPareja\cartas\patoAzul.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro1.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro10.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro11.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro12.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro2.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro3.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro4.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro5.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro6.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro7.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro8.png" />
+    <Content Include="app\images\buscarPareja\cartas\perro9.png" />
+    <Content Include="app\images\buscarPareja\cartas\perroBanco.png" />
+    <Content Include="app\images\buscarPareja\cartas\perroEnCarro.png" />
+    <Content Include="app\images\buscarPareja\cartas\puercoEspin.png" />
+    <Content Include="app\images\buscarPareja\cartas\puercoEspinLimpio.png" />
+    <Content Include="app\images\buscarPareja\cartas\reno.png" />
+    <Content Include="app\images\buscarPareja\cartas\reno2.png" />
+    <Content Include="app\images\buscarPareja\cartas\renoSinCuernos.png" />
+    <Content Include="app\images\buscarPareja\cartas\sapoConSombrero.png" />
+    <Content Include="app\images\buscarPareja\cartas\sapoEnTronco.png" />
+    <Content Include="app\images\buscarPareja\cartas\togre.png" />
+    <Content Include="app\images\buscarPareja\cartas\vaca.png" />
+    <Content Include="app\images\buscarPareja\cartas\zorroCentado.png" />
+    <Content Include="app\images\buscarPareja\cartas\zorroConAntifaz.png" />
+    <Content Include="app\images\yeoman.png" />
+    <Content Include="app\index.html" />
+    <Content Include="app\scripts\Controllers\juego\resultados.js" />
+    <Content Include="app\scripts\Controllers\juego\instrucciones.js" />
+    <Content Include="app\scripts\Controllers\juego\cuestionario.js" />
+    <Content Include="app\scripts\home\home.js" />
+    <Content Include="app\scripts\services\imagenesHelper.js" />
+    <Content Include="app\robots.txt" />
+    <Content Include="app\scripts\app.js" />
+    <Content Include="app\scripts\index.js" />
+    <Content Include="app\scripts\UserService.js" />
+    <Content Include="app\Sonidos\Pajaro.mp3" />
+    <Content Include="app\styles\main.css" />
+    <Content Include="app\styles\miStyle.css" />
+    <Content Include="app\styles\Tui\tui-calendar\dist\tui-calendar.css" />
+    <Content Include="app\styles\Tui\tui-calendar\dist\tui-calendar.js" />
+    <Content Include="app\styles\Tui\tui-calendar\dist\tui-calendar.min.css" />
+    <Content Include="app\styles\Tui\tui-calendar\dist\tui-calendar.min.js" />
+    <Content Include="app\styles\Tui\tui-calendar\tsBannerGenerator.js" />
+    <Content Include="app\styles\Tui\tui-code-snippet\demo\postBridge\server.js" />
+    <Content Include="app\styles\Tui\tui-code-snippet\dist\tui-code-snippet.js" />
+    <Content Include="app\styles\Tui\tui-code-snippet\dist\tui-code-snippet.min.js" />
+    <Content Include="app\styles\Tui\tui-date-picker\dist\tui-date-picker.css" />
+    <Content Include="app\styles\Tui\tui-date-picker\dist\tui-date-picker.js" />
+    <Content Include="app\styles\Tui\tui-date-picker\dist\tui-date-picker.min.js" />
+    <Content Include="app\styles\Tui\tui-time-picker\dist\tui-time-picker.css" />
+    <Content Include="app\styles\Tui\tui-time-picker\dist\tui-time-picker.js" />
+    <Content Include="app\styles\Tui\tui-time-picker\dist\tui-time-picker.min.js" />
+    <Content Include="app\styles\ui-select\select2.css" />
+    <Content Include="app\styles\ui-select\select2.png" />
+    <Content Include="app\views\home\home.html" />
+    <Content Include="app\views\juego\resultados.html" />
+    <Content Include="app\views\juego\instrucciones.html" />
+    <Content Include="app\views\juego\cuestionario.html" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="Leeme.txt" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\styles\Tui\tui-calendar\.bower.json" />
+    <Content Include="app\styles\Tui\tui-calendar\bower.json" />
+    <Content Include="app\styles\Tui\tui-calendar\CODE_OF_CONDUCT.md" />
+    <Content Include="app\styles\Tui\tui-calendar\CONTRIBUTING.md" />
+    <Content Include="app\styles\Tui\tui-calendar\dist\tui-calendar.css.map" />
+    <Content Include="app\styles\Tui\tui-calendar\dist\tui-calendar.js.map" />
+    <Content Include="app\styles\Tui\tui-calendar\dist\tui-calendar.min.css.map" />
+    <Content Include="app\styles\Tui\tui-calendar\dist\tui-calendar.min.js.map" />
+    <Content Include="app\styles\Tui\tui-calendar\LICENSE" />
+    <Content Include="app\styles\Tui\tui-calendar\package-lock.json" />
+    <Content Include="app\styles\Tui\tui-calendar\README.md" />
+    <Content Include="app\styles\Tui\tui-code-snippet\.bower.json" />
+    <Content Include="app\styles\Tui\tui-code-snippet\bower.json" />
+    <Content Include="app\styles\Tui\tui-code-snippet\demo\postBridge\README.md" />
+    <Content Include="app\styles\Tui\tui-code-snippet\ISSUE_TEMPLATE.md" />
+    <Content Include="app\styles\Tui\tui-code-snippet\LICENSE" />
+    <Content Include="app\styles\Tui\tui-code-snippet\package-lock.json" />
+    <Content Include="app\styles\Tui\tui-code-snippet\README.md" />
+    <Content Include="app\styles\Tui\tui-date-picker\.bower.json" />
+    <Content Include="app\styles\Tui\tui-date-picker\bower.json" />
+    <Content Include="app\styles\Tui\tui-date-picker\LICENSE" />
+    <Content Include="app\styles\Tui\tui-date-picker\README.md" />
+    <Content Include="app\styles\Tui\tui-time-picker\.bower.json" />
+    <Content Include="app\styles\Tui\tui-time-picker\bower.json" />
+    <Content Include="app\styles\Tui\tui-time-picker\LICENSE" />
+    <Content Include="app\styles\Tui\tui-time-picker\README.md" />
+    <Content Include=".bowerrc" />
+    <Content Include=".yo-rc.json" />
+    <Content Include="bower.json" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include=".jscsrc" />
+    <Content Include=".jshintrc" />
+    <Content Include="app\bin\jQuery\.bower.json" />
+    <Content Include="app\bin\jQuery\.editorconfig" />
+    <Content Include="app\bin\jQuery\.eslintignore" />
+    <Content Include="app\bin\jQuery\.eslintrc-browser.json" />
+    <Content Include="app\bin\jQuery\.eslintrc-node.json" />
+    <Content Include="app\bin\jQuery\.eslintrc.json" />
+    <Content Include="app\bin\jQuery\.gitattributes" />
+    <Content Include="app\bin\jQuery\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="app\bin\jQuery\.github\lock.yml" />
+    <Content Include="app\bin\jQuery\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="app\bin\jQuery\.gitignore" />
+    <Content Include="app\bin\jQuery\.mailmap" />
+    <Content Include="app\bin\jQuery\.npmignore" />
+    <Content Include="app\bin\jQuery\.npmrc" />
+    <Content Include="app\bin\jQuery\.travis.yml" />
+    <Content Include="app\bin\jQuery\CODE_OF_CONDUCT.md" />
+    <Content Include="app\bin\jQuery\CONTRIBUTING.md" />
+    <Content Include="app\bin\jQuery\dist\.eslintrc.json" />
+    <Content Include="app\bin\jQuery\dist\jquery.min.map" />
+    <Content Include="app\bin\jQuery\dist\jquery.slim.min.map" />
+    <Content Include="app\bin\jQuery\external\sizzle\dist\sizzle.min.map" />
+    <Content Include="app\bin\jQuery\package.json" />
+    <Content Include="app\bin\jQuery\README.md" />
+    <Content Include="app\bin\jQuery\src\.eslintrc.json" />
+    <Content Include="app\bin\jQuery\test\.eslintrc.json" />
+    <Content Include="app\bin\jQuery\test\data\support\csp.log" />
+    <Content Include="app\bin\jQuery\test\node_smoke_tests\.eslintrc.json" />
+    <Content Include="app\bin\jQuery\test\promises_aplus_adapters\.eslintrc.json" />
+    <Content Include="app\bin\font-awesome\.bower.json" />
+    <Content Include="app\bin\font-awesome\.gitignore" />
+    <Content Include="app\bin\font-awesome\.npmignore" />
+    <Content Include="app\bin\font-awesome\bower.json" />
+    <Content Include="app\bin\font-awesome\css\font-awesome.css.map" />
+    <Content Include="app\bin\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="app\bin\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="app\bin\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="app\bin\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="app\bin\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="app\bin\font-awesome\less\animated.less" />
+    <Content Include="app\bin\font-awesome\less\bordered-pulled.less" />
+    <Content Include="app\bin\font-awesome\less\core.less" />
+    <Content Include="app\bin\font-awesome\less\fixed-width.less" />
+    <Content Include="app\bin\font-awesome\less\font-awesome.less" />
+    <Content Include="app\bin\font-awesome\less\icons.less" />
+    <Content Include="app\bin\font-awesome\less\larger.less" />
+    <Content Include="app\bin\font-awesome\less\list.less" />
+    <Content Include="app\bin\font-awesome\less\mixins.less" />
+    <Content Include="app\bin\font-awesome\less\path.less" />
+    <Content Include="app\bin\font-awesome\less\rotated-flipped.less" />
+    <Content Include="app\bin\font-awesome\less\screen-reader.less" />
+    <Content Include="app\bin\font-awesome\less\stacked.less" />
+    <Content Include="app\bin\font-awesome\less\variables.less" />
+    <Content Include="app\bin\font-awesome\scss\font-awesome.scss" />
+    <Content Include="app\bin\font-awesome\scss\_animated.scss" />
+    <Content Include="app\bin\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="app\bin\font-awesome\scss\_core.scss" />
+    <Content Include="app\bin\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="app\bin\font-awesome\scss\_icons.scss" />
+    <Content Include="app\bin\font-awesome\scss\_larger.scss" />
+    <Content Include="app\bin\font-awesome\scss\_list.scss" />
+    <Content Include="app\bin\font-awesome\scss\_mixins.scss" />
+    <Content Include="app\bin\font-awesome\scss\_path.scss" />
+    <Content Include="app\bin\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="app\bin\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="app\bin\font-awesome\scss\_stacked.scss" />
+    <Content Include="app\bin\font-awesome\scss\_variables.scss" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\styles\Tui\tui-calendar\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\juegos\" />
+    <Folder Include="app\styles\JQuery\" />
+    <Folder Include="app\styles\Tui\tui-calendar\docs\" />
+    <Folder Include="app\styles\Tui\tui-code-snippet\demo\postBridge\public\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53000</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

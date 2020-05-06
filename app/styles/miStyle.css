@@ -1,0 +1,66 @@
+.mi-footer {
+  padding-top: 5px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.mi-header {
+  padding-top: 5px;
+  color: #777;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.mi-navbar.navbar {
+  margin-bottom: 0px !important;
+}
+
+.mi-body {
+  min-height: 80vh
+}
+
+.menu-boton {
+  width: 200px;
+}
+
+.altura-menu-boton {
+  height: 50px;
+}
+
+.titulo-h2 {
+  height: 70px;
+}
+
+.margin-mundo {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 70px;
+}
+
+/*Juego de buscar las parejas*/
+.mi-card-border {
+  border: 2px solid #c2cd84;  
+}
+
+.text-warning {
+  font-size: 20px;
+  font-weight: 900;
+  color: #F1C40F;
+}
+
+.text-success {
+  font-size: 20px;
+  font-weight: 900;
+  color: #28B463;
+}
+
+.button-success {
+  background-color: #28B463;
+}
+
+.text-error {
+  font-size: 20px;
+  font-weight: 900;
+  color: #C0392B;
+}

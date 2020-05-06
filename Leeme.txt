@@ -1,0 +1,28 @@
+//Libreria para los juegos 
+https://github.com/wise9/enchant.js/
+
+//Ejemplo para crear juegos con javascript
+https://www.raywenderlich.com/2813-how-to-make-a-simple-html5-game-with-enchant-js
+
+
+//Crea una mapa gps de google
+https://github.com/angular-ui/ui-map
+https://github.com/cloudant-labs/location-tracker-angular/blob/master/tutorial/tutorial.adoc
+
+//Obtener dibujos gratuitos
+https://epymeonline.com/mejores-bancos-de-imagenes-gratis/
+
+//abmod
+https://stackoverflow.com/questions/36269166/how-to-integrate-admob-ads-into-a-cordova-project-for-both-android-and-ios
+https://github.com/floatinghotpot/cordova-admob-pro
+
+
+https://admob-plus.github.io/docs/show-banner.html
+
+
+
+//build android explorar la depuración
+chrome://inspect/#devices
+
+https://developers.google.com/admob/android/test-ads
+https://developers.google.com/admob/ios/test-ads

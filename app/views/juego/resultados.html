@@ -1,0 +1,28 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-xs-12">
+      <a class="btn btn-primary btn" href="#!/">Atrás</a>
+      <br /><br />
+    </div>
+    <div class="col-md-12 text-center">
+      <h2>Los mejores puestos</h2>
+    </div>
+    <div class="col-md-12 table-responsive">
+      <table class="table table-bordered table-hover table-condensed">
+        <thead>
+          <tr>
+            <th>Nombre Usuario</th>
+            <th ng-repeat="(x, y) in res.resultados[0]" ng-if="x != 'nombreUsuario'">{{x}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="r in res.resultados">
+            <td>{{r['nombreUsuario']}}</td>
+            <td ng-repeat="(x, y) in res.resultados[0]" ng-if="x != 'nombreUsuario'">{{r[x]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
